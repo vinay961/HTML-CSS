@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    max-width: 1440px;
+    background-color: #f0f4f5;
+    overflow: hidden;
+    margin: auto;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+    padding: 0 5%;
+}
+nav img{
+    width: 150px;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-right: 20px;
+}
+nav ul li{
+    font-weight: 600;
+    font-size: 17px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    /* text-decoration: underline; */
+    font-weight: 900;
+    font-size: larger;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 85vh;
+}
+.topangle{
+    width: 25px;
+}
+.heroleft{
+    margin-left: 5%;
+    position: relative;
+    width: 50%;
+}
+.heroleft h1{
+    font-size: 70px;
+}
+.heroleft p{
+    color: #7c7c7c;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.bottomangle{
+    width: 25px;
+    position: absolute;
+    right: 25px;
+}
+.mouse{
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 30px;
+}
+.bottom{
+    color: white;
+    background-color: #20bc7e;
+    border-radius: 40px;
+    border: none;
+    padding: 15px 40px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.bottom a{
+    text-decoration: none;
+
+}
+.bottom:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.heroright{
+    margin-left: 5%;
+    position: relative;
+    width: 50%;
+}
+.greenbox{
+    width: 75%;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+}
+.yellowbox{
+    width: 45%;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+}
+.doctor{
+    width: 80%;
+    height: 90%;
+    position: relative;
+    left: 140px;
+}
+.st{
+    width: 90%;
+    z-index: -1;
+    top: -60px;
+    position: absolute;
+    right: -25%;
+}
