@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    font-family: 'Aboreto', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Red Rose', cursive;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo{
+    margin: 25px;
+}
+.header_left ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 23px;
+}
+.header_left ul li a:hover{
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: large;
+}
+.header_left ul li a{
+    list-style: none;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.header_right{
+    margin: 25px;
+}
+.buttom{
+    border: none;
+    background-color: rgb(12, 12, 96);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: aliceblue;
+}
+.buttom:hover{
+    background-color: red;
+    color: white;
+    /* text-decoration: underline; */
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 20px;
+}
+.left_section h1{
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 700;
+
+}
+.left_section p{
+    margin: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.lower_buttom{
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(12, 12, 96);
+    padding: 10px 20px;
+    color: aliceblue;
+}
+.lower_buttom:hover{
+    background-color: red;
+    /* text-decoration: underline; */
+}
