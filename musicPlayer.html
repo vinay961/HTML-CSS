@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .music_player{
+            margin-top: 20px;
+        }
+        .control{
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .control button{
+            background-color: rgb(120, 160, 60);
+            padding: 10px;
+            font-size: medium;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .control button:hover{
+            color: rgb(132, 11, 64);
+        }
+        .control button::after{
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="music_player">
+        <audio id="audio_player" controls muted src="./sound.wav"></audio>
+    </div>
+    <div class="control">
+        <button onclick="playAudio()">Play</button>
+        <button onclick="pauseAudio()">Pause</button>
+        <button onclick="stopAudio()">Stop</button>
+        <button onclick="muteAudio()">Mute</button>
+    </div>
+
+    <script>
+        const audio = document.getElementById("audio_player");
+
+        function playAudio(){
+            audio.play();
+        }
+        function pauseAudio(){
+            audio.pause();
+        }
+        function stopAudio(){
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
