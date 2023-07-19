@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Player</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    .player{
+        margin-top: 30px;
+    }
+    #video_player1{
+        border: 1px solid red;
+        border-radius: 20px;
+        background-color: red;
+        background-image: repeating-linear-gradient(45deg,red,yellow 7%,green 10%);
+        
+        padding: 10px;
+    }
+    .control{
+        margin-top: 20px;
+    }
+    .control button{
+        background-color: rgb(120, 160, 60);
+        padding: 10px;
+        font-size: medium;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        margin: 10px;
+    }
+    .control button:hover{
+            color: rgb(132, 11, 64);
+        }
+</style>
+<body>
+    <div class="player">
+        <video id="video_player1" src="./video3.mp4"  height="200px" width="500px"></video>
+        
+    </div>
+    <div class="control">
+        <button onclick="playVideo()">Play</button>
+        <button onclick="pauseVideo()">Pause</button>
+        <button onclick="stopVideo()">Stop</button>
+        
+    </div>
+
+    <script>
+        const video = document.getElementById("video_player1");
+
+        function playVideo(){
+            video.play();
+        }
+        function pauseVideo(){
+            video.pause();
+        }
+        function stopVideo(){
+            video.pause();
+            video.currentTime = 0;
+        }
+        
+    </script>
+</body>
+</html>
