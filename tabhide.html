@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiding the content</title>
+    <style>
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .header a{
+            text-decoration: none;
+            font-size: large;
+            font-weight: 700;
+            color: rgba(59, 84, 192, 0.873);
+            margin-left: 40px;
+            padding: 20px;
+        }
+        .logo{
+            font-size: x-large;
+            display: block;
+            text-shadow: 2px 2px 5px red;
+        }
+        .section{
+            
+        }
+        .upper{
+            position: relative;
+            left: 650px;
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 700;
+            text-decoration: overline;
+        }
+        .upper p{
+            position: relative;
+            right: 40px;
+            bottom: 5px;
+            color: rebeccapurple;
+        }
+        .tablinks{
+            position: relative;
+            left: 450px;
+            padding: 10px;
+            font-size: large;
+            border-radius: 10px;
+            box-shadow: 4px 4px 5px red;
+        }
+        .tablinks:hover{
+            box-shadow: 4px 4px 5px green;
+        }
+        .tabcontent{
+            position: relative;
+            font-size: large;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            left: 450px;
+            top: 10px;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+            width: 60%;
+            background-color: rgb(105, 184, 163);
+            border-radius: 10px;
+            filter: blur(2px);
+        }
+        .tabcontent h3{
+            color: blue;
+        }
+        .topright {
+            float: right;
+            cursor: pointer;
+            font-size: 28px;
+        }
+        .tabcontent:hover{
+            filter: blur(0px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header  class="header">
+        <div class="logo">
+            <h2>Info</h2>
+        </div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#Services">Services</a>
+            <a href="#Contact">Contact Us</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="upper">
+            <h2>Services</h2>
+            <p>Our Services is topNotch</p>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event,'html')" id="defaultOpen">Frontend Development</button>
+            <button class="tablinks" onclick="openCity(event,'express')">Backend Development</button>
+            <button class="tablinks" onclick="openCity(event,'react')">Framworks</button>
+        </div>
+        <div class="tabcontent" id="html">
+            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+            <h3>Frontend</h3>
+            <p>"Hello! I am a passionate front-end web developer with a keen eye for creating visually captivating and user-friendly websites. My core services encompass everything needed to craft a compelling online presence. I specialize in designing modern and attractive website layouts, employing clean and efficient HTML and CSS code for seamless structuring and styling. With a flair for JavaScript development, I add interactive elements and dynamic functionalities that enhance user engagement. </p>
+        </div>
+        <div class="tabcontent" id="express">
+            <span class="topright" onclick="this.parentElement.style.display='none'">&times</span>
+            <h3>Backend</h3>
+            <p>"Hello there! As a skilled backend web developer, I specialize in creating robust and efficient server-side solutions that power modern web applications. My core services encompass all aspects of backend development, including designing and implementing secure APIs, managing databases, and handling server-side logic. I have a strong proficiency in server-side programming languages such as Node.js, Python, Ruby, or PHP, depending on the specific needs of your project. I take data security seriously, ensuring that sensitive information is encrypted and protected from unauthorized access. Scalability is also a priority for me, as I design backend systems that can handle increasing traffic and user demand without compromising performance.</p>
+        </div>
+        <div class="tabcontent" id="react">
+            <span class="topright" onclick="this.parentElement.style.display='none'">&times</span>
+            <h3>frameWork</h3>
+            <p>"Greetings! I am a skilled web developer specializing in React JS, an incredibly powerful and versatile framework for building dynamic and feature-rich web applications. With extensive expertise in [Framework Name], I offer a wide range of services tailored to meet your unique project requirements. From crafting engaging user interfaces and seamless frontend experiences to developing robust backend functionalities and APIs, I leverage the full potential of [Framework Name] to create high-performance and scalable web solutions. </p>
+        </div>
+    </section>
+
+    <script>
+        function openCity(evt,name){
+            var tabContent,tablinks,i;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for(i=0;i<tabcontent.length;i++){
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for(i=0;i<tablinks.length;i++){
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(name).style.display = "block";
+            evt.currentTarget.name += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
