@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Curtain</title>
+</head>
+<style>
+    .closebtn{
+        font-size: 40px;
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        float: right;
+        margin-right: 10px;
+    }
+    .container{
+        border: 1px solid black;
+        width: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        transition: 0.5s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+    }
+    .container-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        padding: 15px;
+        align-items: center;
+        
+    }
+    .container-content a{
+        text-decoration: none;
+        font-size: large;
+        color: black;
+        color: aliceblue;
+        margin: 15px;
+    }
+    .container-content a:hover{
+        color: #ddc3c3;
+        transition: .3s;
+    }
+</style>
+<body>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+    <div class="container" id="mynav">
+        <a href="#" class="closebtn" onclick="closeNav()">&times</a>
+
+        <div class="container-content">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#blog">Blog</a>
+        </div>
+    </div>
+    <script>
+        function openNav(){
+            document.getElementById("mynav").style.width="20%"
+        }
+        function closeNav(){
+            document.getElementById("mynav").style.width="0%"
+        }
+
+    </script>
+</body>
+</html>
