@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideShow-gallay</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    *{
+        box-sizing: border-box;
+    }
+
+    .im{
+        border-radius: 15px;
+    }
+    .mySlides{
+        display: none;
+        position: relative;
+        left: 150px;
+        border-radius: 15px;
+    }
+    .mySlides img{
+        height: 60%;
+    }
+    .prev,
+    .next{
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+    }
+    .next {
+       right: 150px;
+       border-radius: 3px 0 0 3px;
+}
+.prev{
+    left: 150px;
+}
+.prev:hover,
+.next:hover {
+       background-color: rgba(0, 0, 0, 0.8);
+}
+.text{
+    position: absolute;
+    top: 2px;
+    color: white;
+    left: 5px;
+}
+</style>
+<body>
+    <h2 style="text-align: center;">Slideshow Gallay</h2>
+
+    <div class="container">
+        <div class="mySlides">
+            <div class="text">1/6</div>
+            <img class="im"  src="./portfolio1.jpg" style="height: 400px; width: 80%;">
+        </div>
+        <div class="mySlides">
+            <div class="text">2/6</div>
+            <img class="im" src="./portfolio2.jpg" style="height: 400px; width: 80%;">
+        </div>
+        <div class="mySlides">
+            <div class="text">3/6</div>
+            <img class="im" src="./portfolio3.jpg" style="height: 400px; width: 80%;">
+        </div>
+        <div class="mySlides">
+            <div class="text">4/6</div>
+            <img class="im" src="./portfolio4.jpg" style="height: 400px; width: 80%;">
+        </div>
+        <div class="mySlides">
+            <div class="text">5/6</div>
+            <img class="im" src="./portfolio5.jpg" style="height: 400px; width: 80%;">
+        </div>
+        <div class="mySlides">
+            <div class="text">6/6</div>
+            <img class="im" src="./portfolio6.jpg" style="height: 400px; width: 80%;">
+        </div>
+
+        <a href="#" class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a href="#" class="next" onclick="plusSlides(1)">&#10095</a>
+    </div>
+
+    <script>
+        let slideIndex=1;
+        slides(slideIndex);
+
+        function plusSlides(n){
+            slides(slideIndex+=n);
+        }
+
+        function slides(n){
+            var i;
+            var index = document.getElementsByClassName("mySlides");
+            if(n<1) slideIndex=index.length;
+            if(n>index.length) slideIndex=1;
+
+            for(i=0;i<index.length;i++){
+                index[i].style.display="none";
+            }
+            index[slideIndex-1].style.display="block";
+        }
+    </script>
+</body>
+</html>
